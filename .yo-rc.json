@@ -1,0 +1,11 @@
+{
+  "generator-backbone": {
+    "appPath": "app",
+    "appName": "MeetupChallengeWinner",
+    "coffee": true,
+    "testFramework": "mocha",
+    "templateFramework": "handlebars",
+    "compassBootstrap": false,
+    "includeRequireJS": false
+  }
+}
