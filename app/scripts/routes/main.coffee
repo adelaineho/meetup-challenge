@@ -4,7 +4,6 @@ class MeetupChallengeWinner.Routers.Main extends Backbone.Router
 
   routes:
     '': 'entry'
-    'winner': 'winner'
 
   entry: ->
     console.log "ENTRY"
@@ -12,4 +11,4 @@ class MeetupChallengeWinner.Routers.Main extends Backbone.Router
 
   winner: ->
     console.log "WINNER"
-    true
+    MeetupChallengeWinner.App.Views.Winner.render()

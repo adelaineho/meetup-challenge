@@ -17,7 +17,7 @@ window.MeetupChallengeWinner =
     @App.Views.EntryForm = new @Views.EntryForm({model: @App.Models.Entry})
 
     Backbone.history.start({pushState: true})
-
+  
 $ ->
   'use strict'
   MeetupChallengeWinner.init()

@@ -6,9 +6,7 @@ class MeetupChallengeWinner.Views.Winner extends Backbone.View
 
   tagName: 'div'
 
-  id: ''
-
-  className: ''
+  el: '#main'
 
   events: {}
 
