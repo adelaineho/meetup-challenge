@@ -4,11 +4,12 @@ class MeetupChallengeWinner.Routers.Main extends Backbone.Router
 
   routes:
     '': 'entry'
+    'winner':  'winner'
 
-  entry: ->
+  entry: =>
     console.log "ENTRY"
     MeetupChallengeWinner.App.Views.EntryForm.render()
 
-  winner: ->
+  winner: =>
     console.log "WINNER"
     MeetupChallengeWinner.App.Views.Winner.render()

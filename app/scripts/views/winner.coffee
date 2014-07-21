@@ -12,6 +12,7 @@ class MeetupChallengeWinner.Views.Winner extends Backbone.View
 
   initialize: () ->
     @listenTo @model, 'change', @render
+    #@render()
 
   render: () ->
     @$el.html @template(@model.toJSON())
