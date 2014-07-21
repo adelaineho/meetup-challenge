@@ -8,7 +8,13 @@ class MeetupChallengeWinner.Views.EntryForm extends Backbone.View
 
   el: '#main'
 
-  events: {}
+  events:
+    'change input': (e) ->
+      obj = $(e.currentTarget)
+      data = {}
+      data[obj.attr('name')] = obj.val()
+
+      @model.set(data, {silent: true})
 
   initialize: () ->
     @listenTo @model, 'change', @render
