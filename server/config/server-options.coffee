@@ -1,0 +1,9 @@
+module.exports =
+    name: 'meetup-challenge'
+    #certificate: ''
+    #key: ''
+    #formatters: ''
+    #log: ''
+    #spdy: ''
+    #version: ''
+    #handleUpgrades: ''

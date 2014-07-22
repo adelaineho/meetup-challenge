@@ -10,3 +10,4 @@ body {
     width: 300px;
 }
 
+@import url('../bower_components/bootstrap/dist/css/bootstrap.css');
