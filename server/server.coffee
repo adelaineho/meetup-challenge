@@ -17,7 +17,7 @@ AWS.config.loadFromPath('./config/aws.json');
 # Include our options for Restify
 #
 
-serveroptions = require './config/server-options'
+serveroptions = {} #require './config/server-options'
 appconfig = require './config/app'
 
 
@@ -27,6 +27,7 @@ appconfig = require './config/app'
 # 
 
 server = restify.createServer serveroptions
+
 
 
 #

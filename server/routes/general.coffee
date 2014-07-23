@@ -1,18 +1,26 @@
 module.exports = (server, AWS, restify, options) ->
 
-  server.get '/api/entry', (req, res, next) ->
+  server.post '/api/entry', (req, res, next) ->
 
-    user =
-      email: 
-        "S": "string"
-      firstname: 
-        "S": "string"
-      lastname: 
-        "S": "string"
-      twitter: 
-        "S": "string"
-      epoch: 
+    user = 
+      epoch:
         "N": (new Date).getTime().toString()
+
+    if req.params.email
+      user.email =
+        "S": req.params.email
+
+    if req.params.firstname
+      user.firstname = 
+        "S": req.params.firstname 
+
+    if req.params.lastname
+      user.lastname = 
+        "S": req.params.lastname 
+
+    if req.params.twitter
+      user.twitter = 
+        "S": req.params.twitter 
 
     db = new AWS.DynamoDB({apiVersion: '2012-08-10'})
 

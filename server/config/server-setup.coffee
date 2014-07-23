@@ -5,11 +5,12 @@ module.exports = (server, restify, options) ->
   # - http://mcavage.me/node-restify/#Bundled-Plugins
   # 
 
-  server.use restify.acceptParser(server.acceptable)
-  server.use restify.authorizationParser()
+  #server.use restify.acceptParser(server.acceptable)
+  #server.use restify.authorizationParser()
+  server.use restify.fullResponse()
+  server.use restify.bodyParser()
   server.use restify.dateParser()
   server.use restify.queryParser()
-  server.use restify.jsonp()
+  #server.use restify.jsonp()
   server.use restify.gzipResponse()
-  server.use restify.bodyParser()
-  server.use restify.conditionalRequest()
+  #server.use restify.conditionalRequest()
