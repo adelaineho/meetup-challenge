@@ -7,11 +7,7 @@ class MeetupChallengeWinner.Routers.Main extends Backbone.Router
     'winner':  'winner'
 
   entry: =>
-    console.log "ENTRY"
     MeetupChallengeWinner.App.Views.EntryForm.render()
 
   winner: =>
-    console.log "WINNER"
     MeetupChallengeWinner.App.Models.Winner.fetch()
-    #MeetupChallengeWinner.App.Models.Winner.trigger('change')
-    #MeetupChallengeWinner.App.Views.Winner.render()
