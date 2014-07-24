@@ -9,15 +9,16 @@ class MeetupChallengeWinner.Views.Winner extends Backbone.View
   templateData: ->
     newdata = []
     items = @model.get('Items')
-    total = @model.get('Count')
+    total = items.length
 
     for item,i in items
+      console.log 'i',i, item
       newitem =
         index: i
         firstname: item.firstname.S if item.firstname?
         lastname: item.lastname.S if item.lastname?
         twitter: item.twitter.S if item.twitter?
-        seg_rotation: Math.round((360/total)*i)
+        seg_rotation: Math.ceil((360/total)*i)
         show_rotation: 
           if ((total-i)%2 == 0) 
             Math.round(((360/total)*(total-i))+181) 

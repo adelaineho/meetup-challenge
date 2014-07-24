@@ -142,28 +142,29 @@ img{margin:0;display:block}
     transition:all 5s cubic-bezier(.16,.63,.4,.99);
 }
 
-#wheel .segment:nth-child(5n+1){background-color:#00a0b0}
+/*#wheel .segment:nth-child(5n+1){background-color:#00a0b0}
 #wheel .segment:nth-child(5n+2){background-color:#cc333f}
 #wheel .segment:nth-child(5n+3){background-color:#eb6841}
 #wheel .segment:nth-child(5n+4){background-color:#edc951}
-#wheel .segment:nth-child(5n+5){background-color:#7bb661}
+#wheel .segment:nth-child(5n+5){background-color:#7bb661}*/
 
 #wheel .segment .entrant {
 	color:#fff;
 	position: relative;
 	top: 230px;
-	left: 200px;
+	left: 400px;
 	-webkit-transform-origin: bottom left;
 	-moz-transform-origin: bottom left;
 	-o-transform-origin: bottom left;
 	-ms-transform-origin: bottom left;
 	transform-origin: bottom left;
-	-webkit-transform: rotate(-9deg);
-	-moz-transform: rotate(-9deg);
-	-o-transform: rotate(-9deg);
-	-ms-transform: rotate(-9deg);
-	transform: rotate(-9deg);
-	z-index: 999
+	-webkit-transform: rotate(-2deg);
+	-moz-transform: rotate(-2deg);
+	-o-transform: rotate(-2deg);
+	-ms-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+	z-index: 999;
+	line-height:0;
 }
 
 #wheel .segment .triangle {
