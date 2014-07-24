@@ -1,1 +1,1 @@
-exports.dynamodbTable = "string"
+exports.dynamodbTable = "girl-geeks-hip-registration"

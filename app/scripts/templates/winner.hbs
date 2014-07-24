@@ -1,10 +1,39 @@
+<style>
+	{{#each this}}
+		#segment_{{@index}} {
+			-webkit-transform: rotate({{seg_rotation}}deg);
+			-moz-transform: rotate({{seg_rotation}}deg);
+			-o-transform: rotate({{seg_rotation}}deg);
+			-ms-transform: rotate({{seg_rotation}}deg);
+			transform: rotate({{seg_rotation}}deg)
+		}
+		
+    	.show_{{@index}} {
+        	-webkit-transform: rotate({{show_rotation}}deg);
+			-moz-transform: rotate({{show_rotation}}deg);
+			-o-transform: rotate({{show_rotation}}deg);
+			-ms-transform: rotate({{show_rotation}}deg);
+			transform: rotate({{show_rotation}}deg)
+        }
+	{{/each}}
+</style>
 
-	{{#if logged_in}}
-		{{twitter}}
-	{{else}}
-		{{firstname}} {{lastname}}
-	{{/if}}
-
-	<div class="">
-hellow
+<div id="wrapper">
+	<div id="viewable">
+		<img id="lever_down" src="/images/switch_off.png" class="lever" title="Spin Me!" />
+		<img id="lever_up" src="/images/switch_on.png" class="hidden lever" title="Spinning..." />
+		<div id="lever_bg"></div>
+		<div id="wheel" class="show_0">
+			{{#each-reverse this}}
+				<div class="segment" id="segment_{{index}}">
+					<div class="entrant">
+						{{#if twitter}}{{twitter}}{{else}}{{firstname}} {{lastname}}{{/if}}
+					</div>
+					<div class="triangle"></div>
+					<div class="divider"></div>
+				</div>
+			{{/each-reverse}}
+		</div>
+		<div id="pointer"></div>
 	</div>
+</div>
